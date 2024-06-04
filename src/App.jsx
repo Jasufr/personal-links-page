@@ -11,7 +11,7 @@ function App() {
       <Canvas shadows camera={{ position: [0, 0, 5], fov: 30 }}>
         <color attach="background" args={["black"]} />
         <Experience />
-        <Html>
+        <Html fullscreen>
           <Interface />
         </Html>
       </Canvas>
