@@ -6,22 +6,21 @@ export function Avatar(props) {
   const {animation} = props;
   const group = useRef();
   const { nodes, materials } = useGLTF("model/65eeb285dce97d1ae1d0356a.glb");
-  const { animations: talkingAnimation } = useFBX("animation/Talking.fbx");
+  // const { animations: talkingAnimation } = useFBX("animation/Talking.fbx");
+  const { animations: fallingAnimation } = useFBX("animation/Falling.fbx");
 
-  talkingAnimation[0].name = "Talking";
+  // talkingAnimation[0].name = "Talking";
+  fallingAnimation[0].name = "Falling";
 
-  const { actions } = useAnimations([talkingAnimation[0]], group);
+  const { actions } = useAnimations(fallingAnimation, group);
 
-  // useEffect(() => {
-  //   actions[animation].reset().fadeIn(0.5).play();
-  //   return () => {
-  //     actions[animation].reset().fadeOut(0.5);
-  //   }
-  // }, [animation]);
+  useEffect(() => {
+    actions["Falling"].reset().play();
+  }, []);
 
   return (
     <group {...props} ref={group} dispose={null}>
-      <group>
+      <group rotation-x={-Math.PI / 2}>
         <primitive object={nodes.Hips} />
         <skinnedMesh
           frustumCulled={false}
@@ -95,4 +94,5 @@ export function Avatar(props) {
 }
 
 useGLTF.preload("model/65eeb285dce97d1ae1d0356a.glb");
-useFBX.preload("animation/Talking.fbx");
+// useFBX.preload("animation/Talking.fbx");
+useFBX.preload("animation/Falling.fbx");
