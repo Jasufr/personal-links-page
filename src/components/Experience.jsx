@@ -8,7 +8,7 @@ function Experience() {
   const { viewport } = useThree();
   const [currentTime, setCurrentTime] = useState(new Date());
   const [sunPosition, setSunPosition] = useState([0, 0, 0]);
-  const [autoRotateSpeed, setAutoRotateSpeed] = useState(2);
+  const [autoRotateSpeed, setAutoRotateSpeed] = useState(-2);
 
   useEffect(() => {
     const timerId = setInterval(() => {
@@ -47,7 +47,7 @@ function Experience() {
   }, [currentTime]);
 
   const getRandomInterval = () => {
-    return Math.floor(Math.random() * (10000 - 3000 + 1)) + 3000;
+    return Math.floor(Math.random() * (6000 - 3000 + 1)) + 3000;
   };
 
   useEffect(() => {
