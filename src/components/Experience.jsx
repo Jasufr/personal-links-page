@@ -8,7 +8,7 @@ function Experience() {
   const { viewport } = useThree();
   const [currentTime, setCurrentTime] = useState(new Date());
   const [sunPosition, setSunPosition] = useState([0, 0, 0]);
-  const [autoRotateSpeed, setAutoRotateSpeed] = useState(5);
+  const [autoRotateSpeed, setAutoRotateSpeed] = useState(2);
 
   useEffect(() => {
     const timerId = setInterval(() => {
@@ -52,7 +52,7 @@ function Experience() {
 
   useEffect(() => {
     const changeSpeed = () => {
-      setAutoRotateSpeed((prevSpeed) => (prevSpeed === 5 ? -5 : 5));
+      setAutoRotateSpeed((prevSpeed) => (prevSpeed === 2 ? -2 : 2));
     };
 
     const intervalTime = getRandomInterval();
@@ -65,6 +65,7 @@ function Experience() {
   return (
     <>
       <Environment preset="sunset" />
+      {/* <Sky sunPosition={[10, -1, 10]} /> */}
       <Sky sunPosition={sunPosition} />
       <OrbitControls enableRotate={false} enablePan={false} enableZoom={false} autoRotate={true} autoRotateSpeed={autoRotateSpeed} />
       <Avatar
