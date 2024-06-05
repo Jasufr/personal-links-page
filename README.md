@@ -1,8 +1,30 @@
-# React + Vite
+# Personal Links Page 🔗
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio in React.js with animated 3D character (Three.js). <br>
+Link: https://jasufrlinks.netlify.app/
 
-Currently, two official plugins are available:
+![Capture d'écran 2024-06-05 090433](https://github.com/Jasufr/personal-links-page/assets/125636129/114b87d0-d2e7-4fc0-b9d0-19d478aa88aa)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Also possible to access from this QR code:
+
+![frame](https://github.com/Jasufr/personal-links-page/assets/125636129/07685bb6-eefb-4154-ab78-18c08e131041)
+
+<br>
+
+## Getting Started
+### Setup
+```
+npm install
+```
+
+### Run a server
+```
+npm run dev
+```
+
+## Built With
+- [ReactJS]() — Front-end JS
+- [ThreeJS]() — 3D Model integration
+- [ReadyPlayerMe](https://readyplayer.me/fr/hub) — 3D Model Creation
+- [Mixamo](https://www.mixamo.com/#/) — Model Animations
+- [TailWindCSS](https://tailwindcss.com/) — Styling
