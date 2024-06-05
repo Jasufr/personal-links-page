@@ -1,11 +1,9 @@
 import { Environment, OrbitControls, Sky } from "@react-three/drei";
 import { Avatar } from "./Avatar";
-import { useThree } from "@react-three/fiber";
 import { useEffect, useState } from "react";
 
 function Experience() {
 
-  const { viewport } = useThree();
   const [currentTime, setCurrentTime] = useState(new Date());
   const [sunPosition, setSunPosition] = useState([0, 0, 0]);
   const [autoRotateSpeed, setAutoRotateSpeed] = useState(-2);
@@ -15,7 +13,6 @@ function Experience() {
       setCurrentTime(new Date());
     }, 1000);
 
-    // Cleanup the interval on component unmount
     return () => clearInterval(timerId);
   }, []);
 
@@ -58,20 +55,15 @@ function Experience() {
     const intervalTime = getRandomInterval();
     const speedInterval = setInterval(changeSpeed, intervalTime);
 
-    // Cleanup the interval on component unmount
     return () => clearInterval(speedInterval);
   }, [autoRotateSpeed]);
 
   return (
     <>
       <Environment preset="sunset" />
-      {/* <Sky sunPosition={[10, -1, 10]} /> */}
       <Sky sunPosition={sunPosition} />
       <OrbitControls enableRotate={false} enablePan={false} enableZoom={false} autoRotate={true} autoRotateSpeed={autoRotateSpeed} />
-      <Avatar
-        position-y={-1}
-        animation={"Falling"}
-      />
+      <Avatar position-y={-1} />
     </>
   );
 }

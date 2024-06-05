@@ -3,13 +3,10 @@ import { useGLTF, useFBX, useAnimations } from "@react-three/drei";
 
 export function Avatar(props) {
 
-  const {animation} = props;
   const group = useRef();
   const { nodes, materials } = useGLTF("model/65eeb285dce97d1ae1d0356a.glb");
-  // const { animations: talkingAnimation } = useFBX("animation/Talking.fbx");
   const { animations: fallingAnimation } = useFBX("animation/Falling.fbx");
 
-  // talkingAnimation[0].name = "Talking";
   fallingAnimation[0].name = "Falling";
 
   const { actions } = useAnimations(fallingAnimation, group);
@@ -94,5 +91,4 @@ export function Avatar(props) {
 }
 
 useGLTF.preload("model/65eeb285dce97d1ae1d0356a.glb");
-// useFBX.preload("animation/Talking.fbx");
 useFBX.preload("animation/Falling.fbx");
