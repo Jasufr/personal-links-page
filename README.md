@@ -1,6 +1,6 @@
 # Personal Links Page 🔗
 
-Portfolio in React.js with animated 3D character (Three.js). <br>
+Page gathering all my links. <br>
 Link: https://jasufrlinks.netlify.app/
 
 ![Capture d'écran 2024-06-05 090433](https://github.com/Jasufr/personal-links-page/assets/125636129/114b87d0-d2e7-4fc0-b9d0-19d478aa88aa)
