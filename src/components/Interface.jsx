@@ -33,7 +33,7 @@ function Interface() {
             </li></a>
           </ul>
         </div>
-        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-full text-sm">
+        <div className="text-sm text-center mt-8">
           <p><span className="opacity-40">© 2024 JasuFR. Icons by </span><a className="underline opacity-40 hover:opacity-80 transition-all duration-200" href="https://icons8.com/" target="_blank">Icons8</a></p>
         </div>
       </div>
